@@ -49,10 +49,9 @@ public class AppMain implements Serializable {
 			Client client = ClientBuilder.newClient();
 			String url = "http://localhost:8080/my-001-jakartaee-backend/webapi/person/" + getPersonInfo();
 			WebTarget target = client.target(url);
-			personResult = target.request().get(String.class);
+			setPersonResult(target.request().get(String.class));
 		} catch (Exception e) {
-			FacesContext.getCurrentInstance().addMessage("myform:getdate", new FacesMessage("Exception " + e, "Exception " + e));
-			personResult = "lolo";
+			FacesContext.getCurrentInstance().addMessage("myform:getInfo", new FacesMessage("Exception " + e, "Exception " + e));
 			return null;
 		}
 

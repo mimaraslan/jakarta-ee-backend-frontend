@@ -21,8 +21,7 @@ public class AppMain implements Serializable {
 	/*
 	 * Endpoint for Backend
 	 * 
-	 * curl -X GET
-	 * http://localhost:8080/my-001-jakartaee-backend/webapi/person/Amelia Eiras
+	 * curl -X GET http://localhost:8080/my-001-jakartaee-backend/webapi/person/Amelia Eiras
 	 */
 	@GET
 	@Produces("text/plain")
